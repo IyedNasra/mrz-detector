@@ -1,0 +1,60 @@
+
+    <!doctype html>
+      
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.js"></script>
+</head>
+
+      <body>
+        <table>
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <th>resized</th>
+<th>grey</th>
+<th>gaussian</th>
+<th>blackhat</th>
+<th>scharr</th>
+<th>close</th>
+<th>mask</th>
+<th>close2</th>
+<th>erode</th>
+<th>painted</th>
+<th>crop</th>
+            </tr>
+            
+    <tr>
+      <td>R.jpg</td>
+      <td><img style="max-width: 500px;" src="resized/R.png"</td>
+<td><img style="max-width: 500px;" src="grey/R.png"</td>
+<td><img style="max-width: 500px;" src="gaussian/R.png"</td>
+<td><img style="max-width: 500px;" src="blackhat/R.png"</td>
+<td><img style="max-width: 500px;" src="scharr/R.png"</td>
+<td><img style="max-width: 500px;" src="close/R.png"</td>
+<td><img style="max-width: 500px;" src="mask/R.png"</td>
+<td><img style="max-width: 500px;" src="close2/R.png"</td>
+<td><img style="max-width: 500px;" src="erode/R.png"</td>
+<td><img style="max-width: 500px;" src="painted/R.png"</td>
+<td><img style="max-width: 500px;" src="crop/R.png"</td>
+      <td><span class="histogram">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,2,1,3,3,3,4,2,3,8,9,9,12,8,12,9,14,19,13,22,22,18,24,31,35,39,41,40,48,47,52,61,68,70,64,79,83,95,79,74,70,82,74,64,65,66,62,62,53,42,38,61,50,55,47,45,36,40,46,35,51,46,35,47,30,42,45,34,39,41,44,28,41,37,32,33,47,46,51,39,39,36,34,39,37,36,36,32,39,25,38,39,42,34,35,35,37,46,49,51,49,43,43,48,49,43,43,64,47,42,40,36,42,38,39,51,41,47,41,47,46,32,40,38,42,51,50,44,43,48,42,47,39,43,62,54,49,50,48,60,44,59,48,39,68,61,60,48,58,49,55,61,66,80,66,72,98,91,104,124,153,176,205,220,222,281,352,403,462,516,527,695,706,764,892,924,1085,1097,1105,1132,1150,1260,1287,1315,1302,1221,1281,1156,1084,1016,881,672,515,400,272,210,162,112,64,47,33,27,15,8,5,4,4,2,1,0,0,1,0</span></td>
+    </tr>
+  
+          </tbody>
+        </table>
+        
+<script type="text/javascript">
+$(function() {
+    /** This code runs when everything has been loaded on the page */
+    /* Inline sparklines take their values from the contents of the tag */
+    $('.histogram').sparkline('html', {
+        type: 'line',
+        width: 400,
+        height: 100
+    }); 
+});
+</script>
+
+      </body>
+    </html>
+  
