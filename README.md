@@ -1,11 +1,9 @@
 # Introduction
-Bla bla bla ...
-
+    In progress..
 # Building
 
 # Installation
 Run the below commands :
 <ul>
-<li>pip install requirements.txt</li>
 <li>npm install</li>
 </ul>
