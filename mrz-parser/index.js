@@ -1,6 +1,7 @@
+
 const parse = require('mrz').parse;
 
-let mrz = ['PAISLAEVARSDOTTIR<<THURIDUR<OESP<<<<<<<<<<<<', 'A3536444<7ISL1212123<3103108121212<1239<<<68'];
+let mrz = ['P<GBRTHATCHER<<ROSS<<<<<<<<<<<<<<<<<<<<<<<<<', '2841464979TUN4904265M1601013<<<<<<<<<<<<<<04'];
 
 var result = parse(mrz);
 console.log(result);
