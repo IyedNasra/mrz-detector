@@ -22,7 +22,7 @@ fields = {
     "final_hash": "8",
 }
 
-# Define the list
+# Define the list (unchanged from your original code)
 data_list = [
     {"nom": fields.get("name")},
     {"anom": fields.get("name")},  # nom en arabe
@@ -47,10 +47,9 @@ data_list = [
 ]
 
 # Define the route to serve the JSON file
-@app.route('/output', methods=['POST'])
+@app.route('/output', methods=['GET'])  # Change to 'GET' for accessing via URL
 def serve_json_file():
     try:
-        # Serve the list as JSON
         return jsonify(data_list)
     except Exception as e:
         return jsonify({"success": False, "message": str(e)})
