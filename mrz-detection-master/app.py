@@ -3,7 +3,7 @@ import os
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = 'img'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 def allowed_file(filename):
@@ -20,15 +20,7 @@ def upload_image():
             filename = file.filename
             file.save(os.path.join(UPLOAD_FOLDER, filename))
 
-            # Move the file to another folder
-            new_folder = 'processed_images'
-            if not os.path.exists(new_folder):
-                os.mkdir(new_folder)
-
-            new_filename = os.path.join(new_folder, filename)
-            os.rename(os.path.join(UPLOAD_FOLDER, filename), new_filename)
-
-            print('The image has been moved successfully!')
+            print('The image has been uploaded successfully!')
 
             return redirect(url_for('upload_image'))
 
