@@ -3,6 +3,7 @@ import os
 
 app = Flask(__name__)
 
+BASEDIR = os.getcwd()
 UPLOAD_FOLDER = 'img'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
