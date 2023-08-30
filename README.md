@@ -5,11 +5,12 @@
 # Building
 
 # Installation
--Change working directory to mrz-detection-master
 -Run the below commands :
 <ul>
 <li>npm install</li>
-<li>pip install -requirements.txt<li>
+<li>pip install flask<li>
 </ul>
+-Change working directory to mrz-detection-master
+
 # Running
     tester.ipynb file can output a list of mrz data from image path
