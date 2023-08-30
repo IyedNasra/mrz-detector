@@ -1,7 +1,7 @@
 # Introduction
-    In progress..
+    <p>In progress..
     So far the script is able to input passport images and read the machine readable zones from it and output them in a list
-    what's remaining is to fill the form with the data from the list and improve the interface
+    what's remaining is to fill the form with the data from the list and improve the interface</p>
 # Building
 
 # Installation
