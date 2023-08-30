@@ -54,9 +54,9 @@ def ExtractData(filepath):
             result = result_stdout[start_bracket_index + 1: end_bracket_index]
 
         else:
-            print("No matching brackets found after 'mrz:'")
+            print("No mrz found in the text.")
     else:
-        print("No 'mrz:' found in the text.")
+        print("No mrz found in the text.")
     
     # Use regular expressions to remove the escape sequences for colors and leading/trailing whitespaces
     cleaned_result = re.sub(r'\x1b\[\d+m', '', result).strip()

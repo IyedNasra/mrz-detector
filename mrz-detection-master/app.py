@@ -27,14 +27,8 @@ def upload_image():
             ima_path = absolute_path
             list = ExtractData(ima_path)
             l = parse(list)
-            # request.send_response(200)
-            # request.send_header('Content-type', 'application/json')
-            # request.end_headers()
             return l
     else:
-        # request.send_response(400)
-        # request.send_header('Content-type', 'application/json')
-        # request.end_headers()
         data = {"error","Bad Request - Must use POST"}
         return data
 
