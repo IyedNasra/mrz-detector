@@ -12,10 +12,9 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['POST'])
 def upload_image():
     ima_path = None  # Initialize the variable
-
     if request.method == 'POST':
         # Check if the file is an image
         file = request.files['image']
@@ -28,38 +27,16 @@ def upload_image():
             ima_path = absolute_path
             list = ExtractData(ima_path)
             l = parse(list)
-            print(l)
-            
-    return '''
-        <!doctype html>
-        <html>
-        <head>
-            <title>Image Upload</title>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    text-align: center;
-                }
-                .upload-form {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    margin-top: 50px;
-                }
-                input[type="file"] {
-                    margin-bottom: 20px;
-                }
-            </style>
-        </head>
-        <body>
-            <h1>Upload an Image</h1>
-            <form class="upload-form" action="" method="post" enctype="multipart/form-data">
-                <input type="file" name="image">
-                <input type="submit" value="Upload">
-            </form>
-        </body>
-        </html>
-    '''
+            # request.send_response(200)
+            # request.send_header('Content-type', 'application/json')
+            # request.end_headers()
+            return l
+    else:
+        # request.send_response(400)
+        # request.send_header('Content-type', 'application/json')
+        # request.end_headers()
+        data = {"error","Bad Request - Must use POST"}
+        return data
 
 if __name__ == '__main__':
     app.run(debug=True)
